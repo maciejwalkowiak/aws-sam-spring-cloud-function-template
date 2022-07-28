@@ -1,0 +1,5 @@
+{
+    "group_id": "com.example",
+    "artifact_id": "demo",
+    "__package": "{{ cookiecutter.group_id + '.' + cookiecutter.artifact_id }}"
+}
