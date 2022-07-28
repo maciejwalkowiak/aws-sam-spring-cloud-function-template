@@ -1,4 +1,5 @@
 import os
+import shutil
 
 directory = '{{ cookiecutter.__package.replace('.','/') }}'
 srcDir = 'src/main/java/' + directory + "/"
@@ -15,4 +16,4 @@ testFiles = os.listdir("_src/test/java")
 for f in testFiles:
 	os.rename("_src/test/java/" + f, testDir + f)
 
-os.system('./mvnw verify')
+shutil.rmtree("_src", ignore_errors=False)
